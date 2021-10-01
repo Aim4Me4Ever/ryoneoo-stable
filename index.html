@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id = "titleid">R Yone Oo's Website</title>
+
+    
+</head>
+<body>
+    <ul class="topbar">
+        <li><div id = "date"></div></li>
+        <li><div id = "clock">
+        </div>
+        </li>
+    </ul><br><script src="time.js"></script>
+    <div class='container'>
+        <ul class="navibar">
+            <li><a id='hom' onclick="home()">Home</a></li>
+            <li><a id='new' onclick="news()">News</a></li>
+            <li><a id='vid' onclick="videos()">Videos</a></li>
+            <li><a id='set' onclick="about()">Settings</a></li>
+        </ul>
+    </div>
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;" id="Home">
+    <h2>Home</h2>
+    <p>
+        Hello, welcome to website. I am Home click on the navigation buttons to go to another page. Bye Bye. Yes
+    </p>
+    <br>
+    <br>
+    </div>
+
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;" id="Videos" style="display: none;">
+        <h2>Videos</h2>
+        <p>6_8 hangout vlog-))</p>
+        <video height="240" width="auto" controls>
+            <source src="https://ryoneoo.com/6_8 hangout vlog-)).mp4" type="video/mp4">
+        </video>
+        <p>The new subunit of neomu squad HEHE ENJOY!!</p>
+        <video height="240" width="auto" controls>
+            <source src="https://ryoneoo.com/The new subunit of neomu squad HEHE ENJOY!!.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;" id="About" style="display: none;">
+        <h2>Settings</h2>
+        <div id = "darkmodee" onclick="darkmode()"><p class='dd'>Dark Mode</p></div>
+        <div id = "lightmodee" onclick="lightmode()" style="display: none;"><p class='ll'>Light Mode</p></div>
+    </div>
+
+
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;" id="News" style="display: none;">
+        <h2>News</h2>
+        <p>Breaking News! There are people living on Earth!</p>        
+    </div>
+
+    
+</body>
+</html>
