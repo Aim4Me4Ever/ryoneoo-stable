@@ -76,6 +76,7 @@ function page4() {
 }
 
 function randomphoto() {
-    var x = document.getElementById("image")
-    x.innerHTML = Math.floor((Math.random() * 45) + 1);
+    var x = document.getElementById("test")
+    y = Math.floor((Math.random() * 45) + 1);
+    document.getElementById("image").src="kpop/" + y + ".jpg";
   }

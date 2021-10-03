@@ -7,6 +7,14 @@ h2 {
   text-decoration: underline;
 }
 
+img {
+  width: 20vw;
+  margin-top: 1vw;
+  border-radius: 5px;
+  border: 5px solid var(--settingcol);
+  user-select: none;
+}
+
 :root {
     --lightestcol:#1B2021;
     --lightcol:#6e6e5c;
