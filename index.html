@@ -23,45 +23,50 @@
     </ul><br><script src="time.js"></script>
     <div class='container'>
         <ul class="navibar">
-            <li><a id='hom' onclick="home()">Home</a></li>
-            <li><a id='new' onclick="news()">News</a></li>
-            <li><a id='vid' onclick="videos()">Videos</a></li>
-            <li><a id='set' onclick="about()">Settings</a></li>
+            <li><a onclick="page1()">Home</a></li>
+            <li><a onclick="page2()">News</a></li>
+            <li><a onclick="page3()">Videos</a></li>
+            <li><a onclick="page4()">Settings</a></li>
         </ul>
     </div>
-    <div style="margin-left:25%;padding:1px 16px;height:1000px;" id="Home">
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;" id="page1" style="display: none;">
     <h2>Home</h2>
     <p>
         Hello, welcome to website. I am Home click on the navigation buttons to go to another page. Bye Bye. Yes<br>
-        <div class="loader loader--style5">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-               width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-              <rect x="0" y="0" width="4" height="10" fill="#333">
-                <animateTransform attributeType="xml"
-                  attributeName="transform" type="translate"
-                  values="0 0; 0 20; 0 0"
-                  begin="0" dur="0.6s" repeatCount="indefinite" />
-              </rect>
-              <rect x="10" y="0" width="4" height="10" fill="#333">
-                <animateTransform attributeType="xml"
-                  attributeName="transform" type="translate"
-                  values="0 0; 0 20; 0 0"
-                  begin="0.2s" dur="0.6s" repeatCount="indefinite" />
-              </rect>
-              <rect x="20" y="0" width="4" height="10" fill="#333">
-                <animateTransform attributeType="xml"
-                  attributeName="transform" type="translate"
-                  values="0 0; 0 20; 0 0"
-                  begin="0.4s" dur="0.6s" repeatCount="indefinite" />
-              </rect>
-            </svg>
-          </div>
     </p>
+    <div class="loader loader--style5">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+          <rect x="0" y="0" width="4" height="10" fill="#333">
+            <animateTransform attributeType="xml"
+              attributeName="transform" type="translate"
+              values="0 0; 0 20; 0 0"
+              begin="0" dur="0.6s" repeatCount="indefinite" />
+          </rect>
+          <rect x="10" y="0" width="4" height="10" fill="#333">
+            <animateTransform attributeType="xml"
+              attributeName="transform" type="translate"
+              values="0 0; 0 20; 0 0"
+              begin="0.2s" dur="0.6s" repeatCount="indefinite" />
+          </rect>
+          <rect x="20" y="0" width="4" height="10" fill="#333">
+            <animateTransform attributeType="xml"
+              attributeName="transform" type="translate"
+              values="0 0; 0 20; 0 0"
+              begin="0.4s" dur="0.6s" repeatCount="indefinite" />
+          </rect>
+        </svg>
+      </div>
     <br>
     <br>
     </div>
 
-    <div style="margin-left:25%;padding:1px 16px;height:1000px;" id="Videos" style="display: none;">
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;display: none;" id="page2">
+        <h2>News</h2>
+        <p>Breaking News! There are people living on Earth!!</p>
+    </div>
+
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;display: none;" id="page3" style="display: none;">
         <h2>Videos</h2>
         <p>6_8 hangout vlog-))</p>
         <video height="240" width="auto" controls>
@@ -73,20 +78,11 @@
         </video>
     </div>
 
-    
-    <div style="margin-left:25%;padding:1px 16px;height:1000px;" id="About" style="display: none;">
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;display: none;" id="page4" style="display: none;">
         <h2>Settings</h2>
         <div id = "darkmodee" onclick="darkmode()"><p class='dd'>Dark Mode</p></div>
         <div id = "lightmodee" onclick="lightmode()" style="display: none;"><p class='ll'>Light Mode</p></div>
         <div>Go to </div><a href="https://ryoneoo.com">ryoneoo.com</a> for less features. :))
     </div>
-
-
-    <div style="margin-left:25%;padding:1px 16px;height:1000px;" id="News" style="display: none;">
-        <h2>News</h2>
-        <p>Breaking News! There are people living on Earth!!</p>
-    </div>
-
-    
 </body>
 </html>

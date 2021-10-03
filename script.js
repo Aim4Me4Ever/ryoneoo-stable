@@ -25,52 +25,50 @@ function show(shown, hidden) {
     return false;
 }
 
-function videos() {
-    video1()
-    video2()
-    video3()
-    
-}function video1() {
-    return show('Videos', 'Home');
-}function video2() {
-    return show('Videos', 'News');
-}function video3() {
-    return show('Videos', 'About');
+function page1() {
+    page11()
+    page12()
+    page13()
+}function page11() {
+    return show('page1', 'page2');
+}function page12() {
+    return show('page1', 'page3');
+}function page13() {
+    return show('page1', 'page4');
 }
 
-function home() {
-    home1()
-    home2()
-    home3()
-}function home1() {
-    return show('Home', 'Videos');
-}function home2() {
-    return show('Home', 'News');
-}function home3() {
-    return show('Home', 'About');
+function page2() {
+    page21()
+    page22()
+    page23()
+}function page21() {
+    return show('page2', 'page1');
+}function page22() {
+    return show('page2', 'page3');
+}function page23() {
+    return show('page2', 'page4');
 }
 
-function news() {
-    news1()
-    news2()
-    news3()
-}function news1() {
-    return show('News', 'Videos');
-}function news2() {
-    return show('News', 'Home');
-}function news3() {
-    return show('News', 'About');
+function page3() {
+    page31()
+    page32()
+    page33()
+}function page31() {
+    return show('page3', 'page2');
+}function page32() {
+    return show('page3', 'page1');
+}function page33() {
+    return show('page3', 'page4');
 }
 
-function about() {
-    about1()
-    about2()
-    about3()
-}function about1() {
-    return show('About', 'Videos');
-}function about2() {
-    return show('About', 'Home');
-}function about3() {
-    return show('About', 'News');
+function page4() {
+    page41()
+    page42()
+    page43()
+}function page41() {
+    return show('page4', 'page2');
+}function page42() {
+    return show('page4', 'page3');
+}function page43() {
+    return show('page4', 'page1');
 }
-
