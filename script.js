@@ -5,6 +5,7 @@ function darkmode() {
     r.style.setProperty('--navicol', '#1a1a1a');
     r.style.setProperty('--settingcol', '#E3DCC2');
     r.style.setProperty('--chatcol', '#2c2c2c');
+    r.style.setProperty('--rancol', '#2e2e2b');
     var element = document.body;
     element.className = "darkmode";
     return show('lightmodee', 'darkmodee')
@@ -14,6 +15,7 @@ function lightmode() {
     r.style.setProperty('--navitcol', '#010101');
     r.style.setProperty('--settingcol', '#2e2e2b');
     r.style.setProperty('--chatcol', '#ffffff');
+    r.style.setProperty('--rancol', '#E3DC95');
     var element = document.body;
     element.className = "lightmode";
     return show('darkmodee', 'lightmodee')
@@ -72,3 +74,8 @@ function page4() {
 }function page43() {
     return show('page4', 'page1');
 }
+
+function randomphoto() {
+    var x = document.getElementById("image")
+    x.innerHTML = Math.floor((Math.random() * 45) + 1);
+  }
