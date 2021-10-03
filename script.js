@@ -80,3 +80,6 @@ function randomphoto() {
     y = Math.floor((Math.random() * 45) + 1);
     document.getElementById("image").src="kpop/" + y + ".jpg";
   }
+
+var hideVideo = document.getElementsByClassName("hideVideo")[0];
+hideVideo.style.display = "none";
