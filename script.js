@@ -75,11 +75,35 @@ function page4() {
     return show('page4', 'page1');
 }
 
+var hideVideo = document.getElementsByClassName("loader")[0];
+hideVideo.style.display = "none";
 function randomphoto() {
-    var x = document.getElementById("test")
     y = Math.floor((Math.random() * 45) + 1);
     document.getElementById("image").src="kpop/" + y + ".jpg";
   }
 
-var hideVideo = document.getElementsByClassName("hideVideo")[0];
+function showvid(shownvid) {
+    document.getElementById(shownvid).style.display='block';
+}
+
+var hideVideo = document.getElementsByClassName("6-8-hangout")[0];
 hideVideo.style.display = "none";
+function hangout() {
+    var x = document.getElementById("6-8-hangout");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+var hideVideo = document.getElementsByClassName("subunit")[0];
+hideVideo.style.display = "none";
+function subunit() {
+    var x = document.getElementById("subunit");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }

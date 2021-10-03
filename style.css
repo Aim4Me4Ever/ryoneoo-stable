@@ -158,22 +158,39 @@ li::before {
   user-select: none;
 }
 
-.dd:hover, .ll:hover, .randomphotoclass:hover{
+.dd:hover, .ll:hover, .randomphotoclass:hover, .vidbuttons:hover{
   transition: ease-in 0.3s;
   transform: scale(1.1);
   transition: ease-out 0.3s;
 }
 
-.dd:active, .ll:active, .randomphotoclass:active{
+.dd:active, .ll:active, .randomphotoclass:active, .vidbuttons:active{
   transition: ease-in 0.05s;
   transform: scale(1.0);
   transition: ease-out 0.05s;
 }
 
-.randomphotoclass {
+.randomphotoclass{
   background-color: var(--rancol);
   border-radius: 5px;
   border: 5px solid var(--settingcol);
   user-select: none;
   width: fit-content;
+}
+
+.vids {
+  margin-left: 10px;
+  background-color: var(--rancol);
+  border-radius: 5px;
+  border: 5px solid var(--settingcol);
+}
+
+.vidbuttons {
+  background-color: var(--rancol);
+  border-radius: 5px;
+  border: 5px solid var(--settingcol);
+  user-select: none;
+  width: fit-content;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

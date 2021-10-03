@@ -27,7 +27,7 @@
     <p>
         Hello, welcome to website. I am Home click on the navigation buttons to go to another page. Bye Bye. Yes<br>
     </p><br>
-    <div class="loader loader--style5">
+    <div class="loader--style5">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
           <rect x="0" y="0" width="4" height="10" fill="#333">
@@ -63,16 +63,17 @@
         <h2>Media</h2>
         
         <h3>Photos</h3>
+
         <div class="randomphotoclass" onclick="randomphoto()">Random Photo</div>
         <img src="" id="image">
 
         <h3>Videos</h3>
-        <p>6_8 hangout vlog-))</p>
-        <video class = "hideVideo" id = "6-8-hangout" height="240" width="auto" controls>
+        <div class = "vidbuttons"onclick = "hangout()">6_8 hangout vlog-))</div>
+        <video class = "6-8-hangout vids" id = "6-8-hangout" height="240" width="auto" controls>
             <source src="https://ryoneoo.com/6_8 hangout vlog-)).mp4" type="video/mp4">
         </video>
-        <p>The new subunit of neomu squad HEHE ENJOY!!</p>
-        <video class = "hideVideo" id = "subunit" height="240" width="auto" controls>
+        <div class = "vidbuttons" onclick = "subunit()">The new subunit of neomu squad HEHE ENJOY!!</div>
+        <video class = "subunit vids" id = "subunit" height="240" width="auto" controls>
             <source src="https://ryoneoo.com/The new subunit of neomu squad HEHE ENJOY!!.mp4" type="video/mp4">
         </video>
 
@@ -84,7 +85,7 @@
         <h2>Settings</h2>
         <div id = "darkmodee" onclick="darkmode()"><p class='dd'>Dark Mode</p></div>
         <div id = "lightmodee" onclick="lightmode()" style="display: none;"><p class='ll'>Light Mode</p></div>
-        <div>Go to </div><a href="https://ryoneoo.com">ryoneoo.com</a> for less features. :))
+        <div>Go to <a href="https://ryoneoo.com">ryoneoo.com</a> for stable site since this is an experimental site.</div>
     </div>
 
     <link rel="icon" type="image/ico" href="favicon.ico"/>
