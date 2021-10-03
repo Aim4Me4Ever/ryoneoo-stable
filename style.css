@@ -164,6 +164,12 @@ li::before {
   transition: ease-out 0.3s;
 }
 
+.dd:active, .ll:active, .randomphotoclass:active{
+  transition: ease-in 0.05s;
+  transform: scale(1.0);
+  transition: ease-out 0.05s;
+}
+
 .randomphotoclass {
   background-color: var(--rancol);
   border-radius: 5px;
