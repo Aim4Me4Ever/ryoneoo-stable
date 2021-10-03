@@ -75,8 +75,6 @@ function page4() {
     return show('page4', 'page1');
 }
 
-var hideVideo = document.getElementsByClassName("loader")[0];
-hideVideo.style.display = "none";
 function randomphoto() {
     y = Math.floor((Math.random() * 45) + 1);
     document.getElementById("image").src="kpop/" + y + ".jpg";
