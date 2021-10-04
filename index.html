@@ -8,6 +8,7 @@
     
 </head>
 <body>
+    <!---Top Bar with Time and Date-->
     <ul class="topbar">
         <li><div id = "date"></div></li>
         <li><div id = "clock">
@@ -22,6 +23,8 @@
             <li><a onclick="page4()">Settings</a></li>
         </ul>
     </div>
+
+    <!---Home Tab-->
     <div style="margin-left:25%;padding:1px 16px;height:1000px;" id="page1" style="display: none;">
     <h2>Home</h2>
     <p>
@@ -54,11 +57,13 @@
     <br>
     </div>
 
+    <!---News Tab-->
     <div style="margin-left:25%;padding:1px 16px;height:1000px;display: none;" id="page2">
         <h2>News</h2>
         <p>Breaking News! There are people living on Earth!!</p>
     </div>
 
+    <!---Media Tab-->
     <div style="margin-left:25%;padding:1px 16px;height:1000px;display: none;" id="page3" style="display: none;">
         <h2>Media</h2>
         
@@ -81,10 +86,22 @@
         
     </div>
 
+    <!---Settings Tab-->
     <div style="margin-left:25%;padding:1px 16px;height:1000px;display: none;" id="page4" style="display: none;">
         <h2>Settings</h2>
-        <div id = "darkmodee" onclick="darkmode()"><p class='dd'>Dark Mode</p></div>
-        <div id = "lightmodee" onclick="lightmode()" style="display: none;"><p class='ll'>Light Mode</p></div>
+        <p>Dark Mode:<input type="checkbox" id="switch" onclick="save()"></p>
+        <p>Custom Theme:<input type="checkbox" id="switchcus" onclick="savecus()"></p>
+
+        <!---Custom Theme Part-->
+    <p>
+       
+        <div>
+            <input id = "custoo">
+            <div class = "dd" onclick="customback()">Change Theme Background Color</div>
+            <input id = "custoo">
+            <div class = "dd" onclick="customtext()">Change Theme Text Color</div>
+        </div>
+    </p>
         <div>Go to <a href="https://ryoneoo.com">ryoneoo.com</a> for stable site since this is an experimental site.</div>
     </div>
 

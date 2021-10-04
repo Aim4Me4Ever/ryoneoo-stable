@@ -142,13 +142,20 @@ li::before {
     text-align: center;
 }
 
+.darkmode {
+  background-color: #2c2c2c;
+  color: var(--darkestcol);
+}
+
+.lightmode {
+  background-color: #ffffff;
+}
+
 .dd, .ll {
-  background-color: var(--rancol);
-  border: var(--settingcol) solid 3px;
+  box-shadow:0 0 0 5px var(--settingcol);
   border-radius:0 5px 0 5px;
   width: fit-content;
   user-select: none;
-  margin-bottom: 5px;
 }
 
 .dd:hover, .ll:hover, .randomphotoclass:hover, .vidbuttons:hover{
@@ -166,7 +173,7 @@ li::before {
 .randomphotoclass{
   background-color: var(--rancol);
   border-radius: 5px;
-  border: 3px solid var(--settingcol);
+  border: 5px solid var(--settingcol);
   user-select: none;
   width: fit-content;
 }
@@ -175,44 +182,15 @@ li::before {
   margin-left: 10px;
   background-color: var(--rancol);
   border-radius: 5px;
-  border: 3px solid var(--settingcol);
+  border: 5px solid var(--settingcol);
 }
 
 .vidbuttons {
   background-color: var(--rancol);
   border-radius: 5px;
-  border: 3px solid var(--settingcol);
+  border: 5px solid var(--settingcol);
   user-select: none;
   width: fit-content;
   margin-top: 5px;
   margin-bottom: 5px;
-}
-
-
-
-html[data-theme='light']{  
-  --lightestcol:#1B2021;
-  --lightcol:#6e6e5c;
-  --normalcol:#A6A867;
-  --darkcol:#E3DC95;
-  --darkestcol:#E3DCC2;
-  --navicol:#f1f1f1;
-  --navitcol:#ffffff;
-  --settingcol:#2e2e2b;
-  --chatcol:#ffffff;
-  --rancol:#E3DC95;
-}
-
-html[data-theme='dark'] {
-  --navitcol:#f1f1f1;
-  --navicol:#1a1a1a;
-  --settingcol:#E3DCC2;
-  --rancol:#2e2e2b;
-  background-color: #2c2c2c;
-  color: var(--darkestcol);
-}
-
-html[data-theme='custom'] {
-  background-color: red;
-  color: var(--customtcol);
 }

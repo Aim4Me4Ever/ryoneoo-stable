@@ -21,7 +21,6 @@ function lightmode() {
     return show('darkmodee', 'lightmodee')
 }
 
-//Javascript Navigation
 function show(shown, hidden) {
     document.getElementById(shown).style.display='block';
     document.getElementById(hidden).style.display='none';
@@ -76,7 +75,6 @@ function page4() {
     return show('page4', 'page1');
 }
 
-//Random Photo Part
 function randomphoto() {
     y = Math.floor((Math.random() * 45) + 1);
     document.getElementById("image").src="kpop/" + y + ".jpg";
@@ -86,7 +84,6 @@ function showvid(shownvid) {
     document.getElementById(shownvid).style.display='block';
 }
 
-//Video Toggle Buttons
 var hideVideo = document.getElementsByClassName("6-8-hangout")[0];
 hideVideo.style.display = "none";
 function hangout() {
@@ -108,48 +105,3 @@ function subunit() {
       x.style.display = "none";
     }
   }
-
-//Save Checkbox State
-function save() {	
-	var checkbox = document.getElementById("switch");
-    localStorage.setItem("switchstate", checkbox.checked);	
-}
-
-var checked = JSON.parse(localStorage.getItem("switchstate"));
-    document.getElementById("switch").checked = checked;
-
-function savecus() {
-    var checkboxcus = document.getElementById("switchcus");
-    localStorage.setItem("switchstatecus", checkboxcus.checked);
-}
-
-var checkedcus = JSON.parse(localStorage.getItem("switchstatecus"));
-    document.getElementById("switchcus").checked = checkedcus;
-
-//Save Theme in localStorage
-let theme = localStorage.getItem('data-theme');
-const checkbox = document.getElementById("switch");
-const changeThemeToDark = () =>{
-    document.documentElement.setAttribute("data-theme", "dark")
-    localStorage.setItem("data-theme", "dark")
-}
-
-const changeThemeToLight = () =>{
-    document.documentElement.setAttribute("data-theme", "light")
-    localStorage.setItem("data-theme", 'light')
-}
-
-if(theme === 'dark'){
-    changeThemeToDark()
-}
-
-checkbox.addEventListener('change', ()=> {
-    let theme = localStorage.getItem('data-theme');
-    if (theme ==='dark'){
-        changeThemeToLight()
-    }else{
-        changeThemeToDark()
-    }
-   
-});
-//Custom Theme Part
