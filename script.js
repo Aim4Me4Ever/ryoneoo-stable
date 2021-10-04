@@ -118,9 +118,10 @@ function save() {
 var checked = JSON.parse(localStorage.getItem("switchstate"));
     document.getElementById("switch").checked = checked;
 
-function savecus() {
-    var checkboxcus = document.getElementById("switchcus");
-    localStorage.setItem("switchstatecus", checkboxcus.checked);
+//Save Custom Theme Button Checkbox 
+function savecus() {	
+	var checkboxcus = document.getElementById("switchcus");
+    localStorage.setItem("switchstatecus", checkboxcus.checked);	
 }
 
 var checkedcus = JSON.parse(localStorage.getItem("switchstatecus"));
@@ -129,18 +130,15 @@ var checkedcus = JSON.parse(localStorage.getItem("switchstatecus"));
 //Save Theme in localStorage
 let theme = localStorage.getItem('data-theme');
 const checkbox = document.getElementById("switch");
-const changeThemeToDark = () =>{
+function changeThemeToDark(){
     document.documentElement.setAttribute("data-theme", "dark")
     localStorage.setItem("data-theme", "dark")
 }
 
-const changeThemeToLight = () =>{
+
+function changeThemeToLight(){
     document.documentElement.setAttribute("data-theme", "light")
     localStorage.setItem("data-theme", 'light')
-}
-
-if(theme === 'dark'){
-    changeThemeToDark()
 }
 
 checkbox.addEventListener('change', ()=> {
@@ -150,6 +148,29 @@ checkbox.addEventListener('change', ()=> {
     }else{
         changeThemeToDark()
     }
-   
 });
+
 //Custom Theme Part
+const checkboxcus = document.getElementById("switchcus");
+function changeThemeToCustom() {
+    document.documentElement.setAttribute("data-theme", "custom")
+    localStorage.setItem("data-theme", 'custom')
+}
+
+if(theme === 'custom') {
+    changeThemeToCustom()
+}
+
+checkboxcus.addEventListener('change', ()=> {
+    let theme = localStorage.getItem('data-theme');
+    if (theme ==='custom'){
+        changeThemeToLight()
+    }else{
+        changeThemeToCustom()
+    }
+});
+
+function resetter() {
+    localStorage.setItem("data-theme", "light");
+    location.reload();
+}

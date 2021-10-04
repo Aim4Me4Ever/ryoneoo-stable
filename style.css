@@ -213,6 +213,9 @@ color: var(--darkestcol);
 }
 
 html[data-theme='custom'] {
-background-color: red;
+background-color: #ffafaf;
+--rancol: #ff8282;
+--navicol:#ff8282;
+--lightcol: #8f0000;
 color: var(--customtcol);
 }
