@@ -164,8 +164,7 @@ transition: ease-out 0.05s;
 }
 
 #image {
-  min-width: 25%;
-  max-width: 50%;
+  min-width: 50%;
 }
 .randomphotoclass{
 background-color: var(--rancol);
