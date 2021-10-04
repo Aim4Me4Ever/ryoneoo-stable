@@ -96,12 +96,16 @@
     <p>
        
         <div>
-            <input id = "custoo">
-            <div class = "dd" onclick="customback()">Change Theme Background Color</div>
-            <input id = "custoo">
-            <div class = "dd" onclick="customtext()">Change Theme Text Color</div>
+            <input type="text" id="themebgid">
+            <div class = "dd"  onclick="themebgcol();">Change Theme Background Color</div>
+            <input type = 'text' id = 'themetid' >
+            <div class = "dd" type="button" onclick="themetcol()">Change Theme Text Color</div>
         </div>
     </p>
+    <p id="testy">Press above buttons to test. (Theme Background)</p>
+    <p id="testy2">Press above buttons to test. (Theme Text Color)</p>
+   
+
         <div>Go to <a href="https://ryoneoo.com">ryoneoo.com</a> for stable site since this is an experimental site.</div>
         <div class = "dd" onclick="resetter()" style="background-color: #ff5e5e;">Reset Settings</div>
     </div>

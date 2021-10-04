@@ -174,3 +174,15 @@ function resetter() {
     localStorage.setItem("data-theme", "light");
     location.reload();
 }
+
+function themebgcol(){
+    var themebgcolval = document.getElementById("themebgid").value;
+    
+    document.getElementById("testy").innerHTML = themebgcolval;
+}
+
+function themetcol(){
+    var themetcolval = document.getElementById("themetid").value;
+    
+    document.getElementById("testy2").innerHTML = themetcolval;
+}
