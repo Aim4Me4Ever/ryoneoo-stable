@@ -158,8 +158,8 @@ function changeThemeToCustom() {
     localStorage.setItem("data-theme", 'custom');
 }
 
-if(theme === 'custom') {
-    changeThemeToCustom()
+if(theme === 'dark') {
+    changeThemeToDark()
 }
 
 checkboxcus.addEventListener('change', ()=> {
