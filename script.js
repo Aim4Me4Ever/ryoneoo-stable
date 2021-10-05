@@ -131,30 +131,31 @@ var checkedcus = JSON.parse(localStorage.getItem("switchstatecus"));
 let theme = localStorage.getItem('data-theme');
 const checkbox = document.getElementById("switch");
 function changeThemeToDark(){
-    document.documentElement.setAttribute("data-theme", "dark")
-    localStorage.setItem("data-theme", "dark")
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("data-theme", "dark");
 }
 
 
 function changeThemeToLight(){
-    document.documentElement.setAttribute("data-theme", "light")
-    localStorage.setItem("data-theme", 'light')
+    document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("data-theme", 'light');
 }
 
 checkbox.addEventListener('change', ()=> {
     let theme = localStorage.getItem('data-theme');
     if (theme ==='dark'){
-        changeThemeToLight()
+        changeThemeToLight();
     }else{
-        changeThemeToDark()
+        changeThemeToDark();
     }
 });
 
 //Custom Theme Part
+////Custom Theme Toggle Button Part
 const checkboxcus = document.getElementById("switchcus");
 function changeThemeToCustom() {
-    document.documentElement.setAttribute("data-theme", "custom")
-    localStorage.setItem("data-theme", 'custom')
+    document.documentElement.setAttribute("data-theme", "custom");
+    localStorage.setItem("data-theme", 'custom');
 }
 
 if(theme === 'custom') {
@@ -164,25 +165,53 @@ if(theme === 'custom') {
 checkboxcus.addEventListener('change', ()=> {
     let theme = localStorage.getItem('data-theme');
     if (theme ==='custom'){
-        changeThemeToLight()
+        changeThemeToLight();
     }else{
-        changeThemeToCustom()
+        changeThemeToCustom();
     }
 });
 
 function resetter() {
     localStorage.setItem("data-theme", "light");
+    localStorage.setItem("customthemebg", "");
+    localStorage.setItem("customthemet", "");
+    document.getElementById("switchcus").checked = false;
     location.reload();
 }
 
-function themebgcol(){
-    var themebgcolval = document.getElementById("themebgid").value;
-    
-    document.getElementById("testy").innerHTML = themebgcolval;
+////Custom Theme Input Custom colors Part
+var custo = document.querySelector(":root");
+
+
+let cbgget = localStorage.getItem("customthemebg");
+let ctget = localStorage.getItem("customthemet");
+
+var inputbg = document.getElementById("themebgid");
+var inputt = document.getElementById("themetid");
+
+inputbg.setAttribute("placeholder", cbgget);
+inputt.setAttribute("placeholder", ctget);
+
+if(theme === "custom") {
+    custo.style.setProperty("--custobgcol", cbgget);
+    custo.style.setProperty("--custotcol", ctget);
 }
 
+function themebgcol(){
+
+    var themebgcolval = document.getElementById("themebgid").value;
+
+    custo.style.setProperty("--custobgcol", themebgcolval);
+    localStorage.setItem("customthemebg", themebgcolval);
+    inputbg.setAttribute("placeholder", cbgget);
+}
+
+
 function themetcol(){
+
     var themetcolval = document.getElementById("themetid").value;
-    
-    document.getElementById("testy2").innerHTML = themetcolval;
+
+    custo.style.setProperty("--custotcol", themetcolval);
+    localStorage.setItem("customthemet", themetcolval);
+    inputt.setAttribute("placeholder", ctget);
 }
