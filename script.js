@@ -193,6 +193,7 @@ inputbg.setAttribute("placeholder", cbgget);
 inputt.setAttribute("placeholder", ctget);
 
 if(theme === "custom") {
+    changeThemeToCustom();
     custo.style.setProperty("--custobgcol", cbgget);
     custo.style.setProperty("--custotcol", ctget);
 }
