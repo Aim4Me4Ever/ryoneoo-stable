@@ -220,6 +220,13 @@ color: var(--darkestcol);
 html[data-theme='custom'] {
   background-color: var(--custobgcol);
   color: var(--custotcol);
+  --custonbcol: #f1f1f1;
+  --custotbcol:#6e6e5c;
+  --custotbtcol: #E3DCC2;
+
+  --navicol: var(--custonbcol);
+  --lightcol: var(--custotbcol);
+  --darkestcol: var(--custotbtcol)
 }
 
 checkbox {

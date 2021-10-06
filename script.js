@@ -175,6 +175,8 @@ function resetter() {
     localStorage.setItem("data-theme", "light");
     localStorage.setItem("customthemebg", "");
     localStorage.setItem("customthemet", "");
+    localStorage.setItem("customthemenb", "");
+    localStorage.setItem("customthemetb", "");
     document.getElementById("switchcus").checked = false;
     location.reload();
 }
@@ -185,17 +187,29 @@ var custo = document.querySelector(":root");
 
 let cbgget = localStorage.getItem("customthemebg");
 let ctget = localStorage.getItem("customthemet");
+let cnbget = localStorage.getItem("customthemenb");
+let ctbget = localStorage.getItem("customthemetb");
+let ctbtget = localStorage.getItem("customthemetbt");
 
 var inputbg = document.getElementById("themebgid");
 var inputt = document.getElementById("themetid");
+var inputnb = document.getElementById("themenbid");
+var inputtb = document.getElementById("themetbid");
+var inputtbt = document.getElementById("themetbtid");
 
 inputbg.setAttribute("placeholder", cbgget);
 inputt.setAttribute("placeholder", ctget);
+inputnb.setAttribute("placeholder", cnbget);
+inputtb.setAttribute("placeholder", ctbget);
+inputtbt.setAttribute("placeholder", ctbtget);
 
 if(theme === "custom") {
     changeThemeToCustom();
     custo.style.setProperty("--custobgcol", cbgget);
     custo.style.setProperty("--custotcol", ctget);
+    custo.style.setProperty("--custonbcol", cnbget);
+    custo.style.setProperty("--custotbcol", ctbget);
+    custo.style.setProperty("--custotbtcol", ctbtget);
 }
 
 function themebgcol(){
@@ -207,7 +221,6 @@ function themebgcol(){
     inputbg.setAttribute("placeholder", cbgget);
 }
 
-
 function themetcol(){
 
     var themetcolval = document.getElementById("themetid").value;
@@ -215,4 +228,31 @@ function themetcol(){
     custo.style.setProperty("--custotcol", themetcolval);
     localStorage.setItem("customthemet", themetcolval);
     inputt.setAttribute("placeholder", ctget);
+}
+
+function themenbcol(){
+
+    var themenbcolval = document.getElementById("themenbid").value;
+
+    custo.style.setProperty("--custonbcol", themenbcolval);
+    localStorage.setItem("customthemenb", themenbcolval);
+    inputnb.setAttribute("placeholder", cnbget);
+}
+
+function themetbcol(){
+
+    var themetbcolval = document.getElementById("themetbid").value;
+
+    custo.style.setProperty("--custotbcol", themetbcolval);
+    localStorage.setItem("customthemetb", themetbcolval);
+    inputtb.setAttribute("placeholder", ctbget);
+}
+
+function themetbtcol(){
+
+    var themetbtcolval = document.getElementById("themetbtid").value;
+
+    custo.style.setProperty("--custotbtcol", themetbtcolval);
+    localStorage.setItem("customthemetbt", themetbtcolval);
+    inputtbt.setAttribute("placeholder", ctbtget);
 }
