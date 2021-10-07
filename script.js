@@ -299,3 +299,12 @@ function o2(text) {
     document.execCommand('copy');
     document.body.removeChild(elem);
  }
+//Lessons part
+
+
+
+function question() {
+    const q = document.getElementById("question");
+    const a = document.getElementById("answer").value;
+    q.innerHTML = a;
+}

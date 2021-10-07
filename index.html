@@ -18,7 +18,7 @@
     <div class='container'>
         <ul class="navibar">
             <li><a onclick="page1()">Home</a></li>
-            <li><a onclick="page2()">News</a></li>
+            <li><a onclick="page2()">Lessons</a></li>
             <li><a onclick="page3()">Media</a></li>
             <li><a onclick="page4()">Settings</a></li>
         </ul>
@@ -59,8 +59,20 @@
 
     <!---News Tab-->
     <div style="margin-left:25%;padding:1px 16px;height:1000px;display: none;" id="page2">
-        <h2>News</h2>
-        <p>Breaking News! There are people living on Earth!!</p>
+        <h2>Lessons</h2>
+        <p>Notes to learn from and Q&As to learn faster while learning coding.</p>
+        
+
+        <div class = "centered">
+            <form class = "qnaform">
+                <div class = "qnacontent">
+                    <label class = "subj"> </label>
+                    <label>Question: </label><p id = "question"></p><br>
+                    <input type="text" id = "answer"><br>
+                    <div class = "qnabtn" onclick="question()">Submit Answer</div>
+                </div>
+            </form>
+        </div>
     </div>
 
     <!---Media Tab-->

@@ -118,6 +118,7 @@ html {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 5;
   background-color: var(--lightcol);
 }
 
@@ -265,3 +266,34 @@ checkbox {
 #right-click .o2{
   border-radius: 0 0 5px 5px;
 }
+
+.centered {
+  position: relative;
+}
+
+.qnaform {
+  min-height: fit-content;
+  min-width: fit-content;
+  height: 10vw;
+  width: 10vw;
+  background-color: var(--rancol);
+  border-radius: 10px;
+  border: 5px solid #000000;
+}
+
+.qnacontent {
+  text-align: center;
+}
+
+#answer {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.qnabtn {
+  background-color: var(--rancol);
+  border: var(--settingcol) solid 3px;
+  border-radius:0 5px 0 5px;
+  user-select: none;
+  margin-bottom: 5px;
+} 
