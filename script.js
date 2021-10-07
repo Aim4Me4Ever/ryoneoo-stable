@@ -258,3 +258,44 @@ function themetbtcol(){
     localStorage.setItem("customthemetbt", themetbtcolval);
     inputtbt.setAttribute("placeholder", ctbtget);
 }
+
+//Right click menu
+function rightclick() {
+    rc = document.getElementById("right-click");
+    rc.style.setProperty("display", "block")
+}
+
+document.onclick = hideMenu; 
+document.oncontextmenu = rightClick; 
+
+ function hideMenu() { 
+     document.getElementById("right-click") 
+             .style.display = "none" 
+ } 
+
+ function rightClick(e) { 
+     e.preventDefault(); 
+
+     if (document.getElementById("right-click") .style.display == "block"){ 
+         hideMenu(); 
+     }else{ 
+         var menu = document.getElementById("right-click")      
+         menu.style.display = 'block'; 
+         menu.style.left = e.pageX + "px"; 
+         menu.style.top = e.pageY + "px"; 
+     } 
+ } 
+
+////Right click reload option
+function o1() {
+    window.location.reload();
+}
+
+function o2(text) {
+    const elem = document.createElement('textarea');
+    elem.value = text;
+    document.body.appendChild(elem);
+    elem.select();
+    document.execCommand('copy');
+    document.body.removeChild(elem);
+ }
