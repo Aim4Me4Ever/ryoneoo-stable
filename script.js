@@ -112,7 +112,8 @@ function subunit() {
 //Save Checkbox State
 function save() {	
 	var checkbox = document.getElementById("switch");
-    localStorage.setItem("switchstate", checkbox.checked);	
+    localStorage.setItem("switchstate", checkbox.checked);
+    document.getElementById("switchcus").checked = false;
 }
 
 var checked = JSON.parse(localStorage.getItem("switchstate"));
@@ -121,7 +122,8 @@ var checked = JSON.parse(localStorage.getItem("switchstate"));
 //Save Custom Theme Button Checkbox 
 function savecus() {	
 	var checkboxcus = document.getElementById("switchcus");
-    localStorage.setItem("switchstatecus", checkboxcus.checked);	
+    localStorage.setItem("switchstatecus", checkboxcus.checked);
+    document.getElementById("switch").checked = false;
 }
 
 var checkedcus = JSON.parse(localStorage.getItem("switchstatecus"));
