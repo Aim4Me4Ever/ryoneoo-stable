@@ -301,10 +301,61 @@ function o2(text) {
  }
 //Lessons part
 
+const csquestions = [
+    "What is a peripheral?",
+    "What is soft copy?",
+    "What is hard copy?",
+    "What is footprint?",
+    "What is a display?",
+    "What is a pixel?",
+    "What is resolution?",
+]
 
+const csanswers = [
+    "An external device connected to a computer",
+    "Information and data that is virtual",
+    "Information and data that is physical",
+    "The space taken up by a peripheral",
+    "An electronic device that outputs information via a screen or projection",
+    "An illuminated dot",
+    "The number of pixels in a display"
+]
+
+var arr = Math.floor(Math.random() * csquestions.length)
+ans = "correct"
+document.getElementById("question").innerHTML = csquestions[arr];
+que = csanswers[arr];
+ansd = document.getElementById("answer").value;
 
 function question() {
-    const q = document.getElementById("question");
-    const a = document.getElementById("answer").value;
-    q.innerHTML = a;
+    ansd = document.getElementById("answer").value;
+    if(ansd === que) {
+        var arr = Math.floor(Math.random() * csquestions.length)
+        document.getElementById("question").innerHTML = csquestions[arr];
+        que = csanswers[arr];
+        document.getElementById("aaa").innerHTML = "";
+        document.getElementById("wrong").style.setProperty("display", "none");
+        document.getElementById("va").style.setProperty("display", "none");
+        document.getElementById("answer").value = "";
+    }
+    else {
+        document.getElementById("wrong").style.setProperty("display", "block");
+        document.getElementById("va").style.setProperty("display", "block");
+        ans = "wrong";
+    }
+}
+
+//Enter key pressed in q&a 
+function qnaa(event) {
+    event.preventDefault();
+    question();
+}
+
+//View answers 
+function va() {
+    document.getElementById("aaa").innerHTML = que;
+    document.getElementById("answer").value = que;
+    setTimeout(function(){
+        question()
+    }, 2200); 
 }

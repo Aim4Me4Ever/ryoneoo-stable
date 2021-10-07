@@ -62,15 +62,13 @@
         <h2>Lessons</h2>
         <p>Notes to learn from and Q&As to learn faster while learning coding.</p>
         
-
-        <div class = "centered">
-            <form class = "qnaform">
-                <div class = "qnacontent">
-                    <label class = "subj"> </label>
-                    <label>Question: </label><p id = "question"></p><br>
-                    <input type="text" id = "answer"><br>
-                    <div class = "qnabtn" onclick="question()">Submit Answer</div>
-                </div>
+        <div>
+            <form id="qnaform" onsubmit="qnaa(event)" autocomplete="off">
+                <label for="qnaform" style = "font-weight: bold;text-decoration: underline;">Question:</label><p id = "question"></p>
+                <p id = "aaa"></p>
+                <input id = "answer">
+                <p id = "wrong">Incorrect Answer! Try Again.</p><div id = "va" onclick="va()">View Answer</div>
+                <div class = "dd" id = "qnabtn" onclick="question()">Submit</div>
             </form>
         </div>
     </div>
@@ -85,13 +83,13 @@
         <img src="" id="image">
 
         <h3>Videos</h3>
-        <div class = "vidbuttons"onclick = "hangout()">6_8 hangout vlog-))</div>
+        <div class = "vidbuttons"onclick = "hangout()">Video 1</div>
         <video class = "6-8-hangout vids" id = "6-8-hangout" height="240" width="auto" controls>
-            <source src="https://ryoneoo.com/6_8 hangout vlog-)).mp4" type="video/mp4">
+            <source src="" type="video/mp4">
         </video>
-        <div class = "vidbuttons" onclick = "subunit()">The new subunit of neomu squad HEHE ENJOY!!</div>
+        <div class = "vidbuttons" onclick = "subunit()">Video 2</div>
         <video class = "subunit vids" id = "subunit" height="240" width="auto" controls>
-            <source src="https://ryoneoo.com/The new subunit of neomu squad HEHE ENJOY!!.mp4" type="video/mp4">
+            <source src="" type="video/mp4">
         </video>
 
 
@@ -134,7 +132,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    
 
 
 </body>
