@@ -269,8 +269,7 @@ document.onclick = hideMenu;
 document.oncontextmenu = rightClick; 
 
  function hideMenu() { 
-     document.getElementById("right-click") 
-             .style.display = "none" 
+     document.getElementById("right-click").style.display = "none" 
  } 
 
  function rightClick(e) { 
@@ -300,39 +299,41 @@ function o2(text) {
     document.body.removeChild(elem);
  }
 //Lessons part
+var subject = "cs"
 
-const csquestions = [
-    "What is a peripheral?",
-    "What is soft copy?",
-    "What is hard copy?",
-    "What is footprint?",
-    "What is a display?",
-    "What is a pixel?",
-    "What is resolution?",
-]
+function submath() {
+    lessonsq = mathquestions;
+    lessonsa = mathanswers;
+    que = lessonsa[arr];
+    document.getElementById("question").innerHTML = lessonsq[arr];
+    arr = Math.floor(Math.random() * lessonsq.length);
+    var subject = "cs"
+    document.getElementById("qtitle").innerHTML = "Maths"
+} 
 
-const csanswers = [
-    "An external device connected to a computer",
-    "Information and data that is virtual",
-    "Information and data that is physical",
-    "The space taken up by a peripheral",
-    "An electronic device that outputs information via a screen or projection",
-    "An illuminated dot",
-    "The number of pixels in a display"
-]
+function subcs() {
+    lessonsq = csquestions;
+    lessonsa = csanswers;
+    que = lessonsa[arr];
+    document.getElementById("question").innerHTML = lessonsq[arr];
+    var subject = "maths"
+    document.getElementById("qtitle").innerHTML = "CS"
+}
 
-var arr = Math.floor(Math.random() * csquestions.length)
+var lessonsq = csquestions;
+var lessonsa = csanswers;
+
+var arr = Math.floor(Math.random() * lessonsq.length)
 ans = "correct"
-document.getElementById("question").innerHTML = csquestions[arr];
-que = csanswers[arr];
+que = lessonsa[arr];
 ansd = document.getElementById("answer").value;
 
 function question() {
     ansd = document.getElementById("answer").value;
     if(ansd === que) {
-        var arr = Math.floor(Math.random() * csquestions.length)
-        document.getElementById("question").innerHTML = csquestions[arr];
-        que = csanswers[arr];
+        var arr = Math.floor(Math.random() * lessonsq.length)
+        document.getElementById("question").innerHTML = lessonsq[arr];
+        que = lessonsa[arr];
         document.getElementById("aaa").innerHTML = "";
         document.getElementById("wrong").style.setProperty("display", "none");
         document.getElementById("va").style.setProperty("display", "none");

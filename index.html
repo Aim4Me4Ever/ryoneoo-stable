@@ -61,10 +61,19 @@
     <div style="margin-left:25%;padding:1px 16px;height:1000px;display: none;" id="page2">
         <h2>Lessons</h2>
         <p>Notes to learn from and Q&As to learn faster while learning coding.</p>
-        
+        <div class="dropdown">
+            <div class="dropbtn dd">Choose Subject</div>
+            <div class="dropdown-content">
+              <a onclick="subcs()">CS</a>
+              <a onclick="submath()">Maths</a>
+              <a class = "disable">ICT</a>
+              <a class = "disable">Physics</a>
+              <a class = "disable">A Maths</a>
+            </div>
+          </div>
         <div>
             <form id="qnaform" onsubmit="qnaa(event)" autocomplete="off">
-                <label for="qnaform" style = "font-weight: bold;text-decoration: underline;">Question:</label><p id = "question"></p>
+                <label for="qnaform" id = "qtitle" style = "font-weight: bold;text-decoration: underline;"></label><p id = "question"></p>
                 <p id = "aaa"></p>
                 <input id = "answer">
                 <p id = "wrong">Incorrect Answer! Try Again.</p><div id = "va" onclick="va()">View Answer</div>
@@ -127,6 +136,7 @@
     </div>
 
     <link rel="icon" type="image/ico" href="favicon.ico"/>
+    <script src="lessons.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
