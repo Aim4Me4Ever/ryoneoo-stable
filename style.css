@@ -355,3 +355,7 @@ checkbox {
   opacity: 0.5;
   text-decoration: none;
 }
+
+a {
+  color: inherit;
+}
