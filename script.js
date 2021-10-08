@@ -309,6 +309,8 @@ function submath() {
     arr = Math.floor(Math.random() * lessonsq.length);
     var subject = "cs"
     document.getElementById("qtitle").innerHTML = "Maths"
+    document.getElementById("morsecodetable").style.setProperty("display", "none");
+    document.getElementById("morsecodetabletoggle").style.setProperty("display", "none");
 } 
 
 function subcs() {
@@ -318,6 +320,29 @@ function subcs() {
     document.getElementById("question").innerHTML = lessonsq[arr];
     var subject = "maths"
     document.getElementById("qtitle").innerHTML = "CS"
+    document.getElementById("morsecodetable").style.setProperty("display", "none");
+    document.getElementById("morsecodetabletoggle").style.setProperty("display", "none");
+}
+//Morse Code Table Toggler
+function submc() {
+    lessonsq = mcquestions;
+    lessonsa = mcanswers;
+    que = lessonsa[arr];
+    document.getElementById("question").innerHTML = lessonsq[arr];
+    var subject = "morse";
+    document.getElementById("qtitle").innerHTML = "Morse Code";
+    document.getElementById("morsecodetabletoggle").style.setProperty("display", "block");
+}
+
+mctable = document.getElementById("morsecodetable").style;
+mctable.display = "none"
+function mctog() {
+    if (mctable.display === "none"){
+        mctable.display = "block"
+    }
+    else{
+        mctable.display = "none"
+    }
 }
 
 var lessonsq = csquestions;

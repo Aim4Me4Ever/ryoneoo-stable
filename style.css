@@ -359,3 +359,22 @@ checkbox {
 a {
   color: inherit;
 }
+
+.morsecodetable , th,  td{
+  border: 2px solid;
+  border-collapse: collapse;
+  text-align: center;
+
+}
+
+
+td {
+  width: 50px;
+}
+
+#morsecodetabletoggle {
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  display: none;
+}
