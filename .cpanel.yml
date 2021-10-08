@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ryoneoo/public_html/
-    - / -R $DEPLOYPATH
+    - /bin/cp -a $DEPLOYPATH
