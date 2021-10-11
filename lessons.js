@@ -103,3 +103,33 @@ const mcanswers = [
     "-.--",
     "--..",
 ]
+
+////Physics Q&A
+const physicsquestions = [
+    "What is a voltmeter?",
+    "What are the effects of current?",
+    "How do you calculate the resistance of a conductor?",
+    "What is a resistor?",
+    "What is Electromotive Force?",
+    "What are magnetic materials?",
+    "What are ferromagnetic substances?",
+    "What are non-magnetic materials?",
+    "What are the magnetic properties of iron?",
+    "What are the magnetic properties of steel?",
+    "What is Faraday's law of electromagnetic Induction?",
+    "What is Lenz's law?"
+]
+
+const physicsanswers = [
+    "It is a device which is used to measure the potential difference",
+    "Heating effect, chemical effect and magnetic effect",
+    "resistance = resistivity * length / cross-sectional area",
+    "A resistor is a circuit component which is made from a substance having resistance",
+    "Electromotive is the energy provided by a battery per coulomb of charge passing through it",
+    "Materials that are attracted by a magnet or can be made into magnets",
+    "Ferromagnetic substances are strongly attracted to the pole of a strong magnet",
+    "Materials that are not attracted by a magnet or cannot be made into magnets",
+    "1. Magnetically soft material. Easy to magnetise but loses it easily. 2. Induced magnetism is stronger. 3. Induced magnetism is lost when the permanent magnet is removed. 4. Used to make electromagnets. 5. Used in electric bells and magnetic relays.",
+    "1. Magnetically hard material. Hard to magnetise but retains it longer. 2. Induced magnetism is weaker. 3. Induced magnetism is retained, though weaker, when the permanent magnet is removed. 4. Used to make permanent magnets. 5. Used in loudspeakers and electric meters.",
+    "The induced current produces a magnetic field which opposes the change in the original magnetic flux"
+]

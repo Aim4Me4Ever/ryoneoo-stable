@@ -19,10 +19,10 @@
     </ul><br><script src="time.js"></script>
     <div class='container'>
         <ul class="navibar">
-            <li><a onclick="page1()">Home</a></li>
-            <li><a onclick="page2()">Lessons</a></li>
-            <li><a onclick="page3()">Media</a></li>
-            <li><a onclick="page4()">Settings</a></li>
+            <li><a id = "p1" onclick="page1()">Home</a></li>
+            <li><a id = "p2" onclick="page2()">Lessons</a></li>
+            <li><a id = "p3" onclick="page3()">Media</a></li>
+            <li><a id = "p4" onclick="page4()">Settings</a></li>
         </ul>
     </div>
 
@@ -59,19 +59,19 @@
     <br>
     </div>
 
-    <!---News Tab-->
+    <!---Lessons Tab-->
     <div style="margin-left:25%;padding:1px 16px;height:1000px;display: none;" id="page2">
         <h2>Lessons</h2>
         <p>Notes to learn from and Q&As to learn faster while learning coding.</p>
         <div class="dropdown">
             <div class="dropbtn dd">Choose Subject</div>
             <div class="dropdown-content">
-              <a onclick="subcs()">CS</a>
-              <a onclick="submath()">Maths</a>
-              <a onclick="submc()">Morse Code</a>
-              <a class = "disable">ICT</a>
-              <a class = "disable">Physics</a>
-              <a class = "disable">A Maths</a>
+              <a class = "choosesub" onclick="subcs()">CS</a>
+              <a class = "choosesub" onclick="submath()">Maths</a>
+              <a class = "choosesub" onclick="subphysics()">Physics</a>
+              <a class = "choosesub" onclick="submc()">Morse Code</a>
+              <a class = "choosesub disable">ICT</a>
+              <a class = "choosesub disable">A Maths</a>
             </div>
           </div>
         <div>
@@ -224,23 +224,33 @@
     <p>
        
         <div>
+            <form onsubmit="bg(event)" autocomplete="off">
             <input type="text" id="themebgid">
             <div class = "dd"  onclick="themebgcol();">Change Theme Background Color</div>
-
+            </form>
+            
+            <form onsubmit="txt(event)" autocomplete="off">
             <input type = 'text' id = 'themetid' >
             <div class = "dd" type="button" onclick="themetcol()">Change Theme Text Color</div>
-
+            </form>
+            
+            <form onsubmit="nav(event)" autocomplete="off">
             <input type = 'text' id = 'themenbid' >
             <div class = "dd" type="button" onclick="themenbcol()">Change Theme Navigation Bar Color</div>
+            </form>
 
+            <form onsubmit="topbar(event)" autocomplete="off">
             <input type = 'text' id = 'themetbid' >
             <div class = "dd" type="button" onclick="themetbcol()">Change Theme Top Bar Color</div>
+            </form>
 
+            <form onsubmit="topbartxt(event)" autocomplete="off">
             <input type = 'text' id = 'themetbtid' >
             <div class = "dd" type="button" onclick="themetbtcol()">Change Theme Top Bar Text Color</div>
+            </form>
         </div>
     </p>
-        <div>Go to <a href="https://ryoneoo.xyz">ryoneoo.xyz</a> for experimental features.</div>
+    <div>Go to <a href="https://ryoneoo.xyz">ryoneoo.xyz</a> for experimental features.</div>
         <div class = "dd" onclick="resetter()" style="background-color: #ff5e5e;">Reset Settings</div>
     </div>
 

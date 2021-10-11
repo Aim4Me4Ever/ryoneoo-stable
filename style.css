@@ -27,6 +27,7 @@ user-select: none;
   --chatcol:#ffffff;
   --rancol:#E3DC95;
   --hover-rancol: #85815a;
+  --activecol: var(--rancol);
 }
 
 .navibar {
@@ -40,6 +41,14 @@ user-select: none;
   overflow: auto;
 }
 
+@media only screen and (max-width: 240px) {
+
+  div.navibar {
+  background-color: red;
+  }
+  
+  }
+
 li a {
   display: block;
   padding: 8px 16px;
@@ -51,14 +60,14 @@ li {
 }
 
 .active {
-  background-color: var(--darkcol);
+  background-color: var(--activecol);
   font-size: large;
   font-weight: bold;
   border: rgba(65, 65, 65, 0.63) solid 2px;
 }
 
 li a.active {
-  background-color: var(--darkcol);
+  background-color: var(--activecol);
   font-size: large;
   font-weight: bold;
   border: rgba(65, 65, 65, 0.63) solid 2px;
@@ -159,6 +168,10 @@ transform: scale(1.1);
 transition: ease-out 0.3s;
 }
 
+.choosesub {
+  border: 2.5px var(--lightestcol) solid;
+}
+
 #qnabtn:hover {
 transition: ease-in 0.3s;
 transform: scale(1.1) translate(-50%);
@@ -178,8 +191,10 @@ transition: ease-out 0.05s;
 }
 
 #image {
-  min-width: 50%;
+  min-width: 50vw;
+  display: block;
 }
+
 .randomphotoclass{
 background-color: var(--rancol);
 border-radius: 5px;
@@ -217,6 +232,7 @@ html[data-theme='light']{
 --chatcol:#ffffff;
 --rancol:#E3DC95;
 --hover-rancol: #85815a;
+--activecol: var(--rancol);
 }
 
 html[data-theme='dark'] {
@@ -225,6 +241,7 @@ html[data-theme='dark'] {
 --settingcol:#E3DCC2;
 --rancol:#2e2e2b;
 --hover-rancol: #8a8a7b;
+--activecol: #383830;
 background-color: #2c2c2c;
 color: var(--darkestcol);
 }
@@ -237,7 +254,6 @@ html[data-theme='custom'] {
   --custonbcol: #f1f1f1;
   --custotbcol:#6e6e5c;
   --custotbtcol: #E3DCC2;
-
   --navicol: var(--custonbcol);
   --lightcol: var(--custotbcol);
   --darkestcol: var(--custotbtcol)
@@ -331,6 +347,7 @@ checkbox {
   background-color: var(--rancol);
   min-width: fit-content;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border: 3px var(--lightestcol) solid;
   border-radius: 10px;
   z-index: 1;
 }
