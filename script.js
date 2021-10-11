@@ -200,7 +200,9 @@ function resetter() {
     localStorage.setItem("customthemet", "");
     localStorage.setItem("customthemenb", "");
     localStorage.setItem("customthemetb", "");
-    document.getElementById("switchcus").checked = false;
+    // document.getElementById("vaswitch").checked = false;  
+    // document.getElementById("vava").style.setProperty("display", "none")  
+    // valocalvalue = 3;
     location.reload();
 }
 
@@ -332,6 +334,8 @@ else if(sub === "physics"){
 }
 else if(sub === "morse"){
     submc()
+}else if(sub === "ict"){
+    subict()
 }
 
 function submath() {
@@ -345,6 +349,14 @@ function submath() {
     document.getElementById("morsecodetabletoggle").style.setProperty("display", "none");
     localStorage.setItem("subject", "maths")
 } 
+//View Answer Keyboard shortcut
+document.addEventListener("keydown", function(event) {
+    if (event.ctrlKey && event.code === "KeyV")
+    {
+        va()
+        event.preventDefault();
+    }
+});
 
 function subcs() {
     lessonsq = csquestions;
@@ -366,6 +378,17 @@ function subphysics() {
     document.getElementById("morsecodetable").style.setProperty("display", "none");
     document.getElementById("morsecodetabletoggle").style.setProperty("display", "none");
     localStorage.setItem("subject", "physics")
+}
+
+function subict() {
+    lessonsq = ictquestions;
+    lessonsa = ictanswers;
+    que = lessonsa[arr];
+    document.getElementById("question").innerHTML = lessonsq[arr];
+    document.getElementById("qtitle").innerHTML = "ICT"
+    document.getElementById("morsecodetable").style.setProperty("display", "none");
+    document.getElementById("morsecodetabletoggle").style.setProperty("display", "none");
+    localStorage.setItem("subject", "ict")
 }
 //Morse Code Table Toggler
 function submc() {

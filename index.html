@@ -67,10 +67,10 @@
             <div class="dropbtn dd">Choose Subject</div>
             <div class="dropdown-content">
               <a class = "choosesub" onclick="subcs()">CS</a>
+              <a class = "choosesub" onclick="subict()">ICT</a>
               <a class = "choosesub" onclick="submath()">Maths</a>
               <a class = "choosesub" onclick="subphysics()">Physics</a>
               <a class = "choosesub" onclick="submc()">Morse Code</a>
-              <a class = "choosesub disable">ICT</a>
               <a class = "choosesub disable">A Maths</a>
             </div>
           </div>
@@ -217,6 +217,8 @@
     <!---Settings Tab-->
     <div style="margin-left:25%;padding:1px 16px;height:1000px;display: none;" id="page4" style="display: none;">
         <h2>Settings</h2>
+        
+        <h3>Theme Settings</h3>
         <p>Dark Mode:<input type="checkbox" id="switch" onclick="save()"></p>
         <p>Custom Theme:<input type="checkbox" id="switchcus" onclick="savecus()"></p>
 
@@ -249,8 +251,15 @@
             <div class = "dd" type="button" onclick="themetbtcol()">Change Theme Top Bar Text Color</div>
             </form>
         </div>
-    </p>
-    <div>Go to <a href="https://ryoneoo.xyz">ryoneoo.xyz</a> for experimental features.</div>
+    </p><br>
+
+    <!---<h3>Lessons Settings</h3>
+    <p>Auto Next Question:<input type="checkbox" id="vaswitch" onclick="vasettings()"></p>
+    <div id = "vaswitch" style = "display: none;"><label>View Answers Timeout Seconds:</label><input type = "text" id = "vavalue" value="3"></div>
+    <div class = "dd" type="button" onclick="vavaluechange()">Change Timeout</div>--->
+
+    <br>
+    <br>
         <div class = "dd" onclick="resetter()" style="background-color: #ff5e5e;">Reset Settings</div>
     </div>
 
@@ -261,8 +270,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-
 </body>
+
 <div id = "right-click">
     <div class = "option o1" onclick="o1()">Reload</div>
     <!---<div class = "option o2" onclick="o2()">Copy</div>--->

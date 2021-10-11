@@ -7,6 +7,10 @@ h2 {
 text-decoration: underline;
 }
 
+h3 {
+  text-decoration: underline;
+}
+
 img {
 width: 20vw;
 margin-top: 1vw;
@@ -166,10 +170,6 @@ margin-bottom: 5px;
 transition: ease-in 0.3s;
 transform: scale(1.1);
 transition: ease-out 0.3s;
-}
-
-.choosesub {
-  border: 2.5px var(--lightestcol) solid;
 }
 
 #qnabtn:hover {
@@ -358,6 +358,8 @@ checkbox {
   text-decoration: none;
   display: block;
   user-select: none;
+  border-bottom: 2.5px var(--lightestcol) solid;
+  border-collapse: collapse;
 }
 
 .dropdown-content a:hover {background-color: var(--hover-rancol);}
