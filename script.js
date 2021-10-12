@@ -322,136 +322,136 @@ function o2(text) {
     document.body.removeChild(elem);
  }
 //Lessons part
-var sub = localStorage.getItem("subject")
-if(sub === "maths"){
-    submath()
-}
-else if(sub === "cs"){
-    subcs()
-}
-else if(sub === "physics"){
-    subphysics()
-}
-else if(sub === "morse"){
-    submc()
-}else if(sub === "ict"){
-    subict()
-}
+// var sub = localStorage.getItem("subject")
+// if(sub === "maths"){
+//     submath()
+// }
+// else if(sub === "cs"){
+//     subcs()
+// }
+// else if(sub === "physics"){
+//     subphysics()
+// }
+// else if(sub === "morse"){
+//     submc()
+// }else if(sub === "ict"){
+//     subict()
+// }
 
-function submath() {
-    lessonsq = mathquestions;
-    lessonsa = mathanswers;
-    que = lessonsa[arr];
-    document.getElementById("question").innerHTML = lessonsq[arr];
-    arr = Math.floor(Math.random() * lessonsq.length);
-    document.getElementById("qtitle").innerHTML = "Maths"
-    document.getElementById("morsecodetable").style.setProperty("display", "none");
-    document.getElementById("morsecodetabletoggle").style.setProperty("display", "none");
-    localStorage.setItem("subject", "maths")
-} 
-//View Answer Keyboard shortcut
-document.addEventListener("keydown", function(event) {
-    if (event.ctrlKey && event.code === "KeyV")
-    {
-        va()
-        event.preventDefault();
-    }
-});
+// function submath() {
+//     lessonsq = mathquestions;
+//     lessonsa = mathanswers;
+//     que = lessonsa[arr];
+//     document.getElementById("question").innerHTML = lessonsq[arr];
+//     arr = Math.floor(Math.random() * lessonsq.length);
+//     document.getElementById("qtitle").innerHTML = "Maths"
+//     document.getElementById("morsecodetable").style.setProperty("display", "none");
+//     document.getElementById("morsecodetabletoggle").style.setProperty("display", "none");
+//     localStorage.setItem("subject", "maths")
+// } 
+// //View Answer Keyboard shortcut
+// document.addEventListener("keydown", function(event) {
+//     if (event.ctrlKey && event.code === "KeyV")
+//     {
+//         va()
+//         event.preventDefault();
+//     }
+// });
 
-function subcs() {
-    lessonsq = csquestions;
-    lessonsa = csanswers;
-    que = lessonsa[arr];
-    document.getElementById("question").innerHTML = lessonsq[arr];
-    document.getElementById("qtitle").innerHTML = "CS"
-    document.getElementById("morsecodetable").style.setProperty("display", "none");
-    document.getElementById("morsecodetabletoggle").style.setProperty("display", "none");
-    localStorage.setItem("subject", "cs")
-}
+// function subcs() {
+//     lessonsq = csquestions;
+//     lessonsa = csanswers;
+//     que = lessonsa[arr];
+//     document.getElementById("question").innerHTML = lessonsq[arr];
+//     document.getElementById("qtitle").innerHTML = "CS"
+//     document.getElementById("morsecodetable").style.setProperty("display", "none");
+//     document.getElementById("morsecodetabletoggle").style.setProperty("display", "none");
+//     localStorage.setItem("subject", "cs")
+// }
 
-function subphysics() {
-    lessonsq = physicsquestions;
-    lessonsa = physicsanswers;
-    que = lessonsa[arr];
-    document.getElementById("question").innerHTML = lessonsq[arr];
-    document.getElementById("qtitle").innerHTML = "Physics"
-    document.getElementById("morsecodetable").style.setProperty("display", "none");
-    document.getElementById("morsecodetabletoggle").style.setProperty("display", "none");
-    localStorage.setItem("subject", "physics")
-}
+// function subphysics() {
+//     lessonsq = physicsquestions;
+//     lessonsa = physicsanswers;
+//     que = lessonsa[arr];
+//     document.getElementById("question").innerHTML = lessonsq[arr];
+//     document.getElementById("qtitle").innerHTML = "Physics"
+//     document.getElementById("morsecodetable").style.setProperty("display", "none");
+//     document.getElementById("morsecodetabletoggle").style.setProperty("display", "none");
+//     localStorage.setItem("subject", "physics")
+// }
 
-function subict() {
-    lessonsq = ictquestions;
-    lessonsa = ictanswers;
-    que = lessonsa[arr];
-    document.getElementById("question").innerHTML = lessonsq[arr];
-    document.getElementById("qtitle").innerHTML = "ICT"
-    document.getElementById("morsecodetable").style.setProperty("display", "none");
-    document.getElementById("morsecodetabletoggle").style.setProperty("display", "none");
-    localStorage.setItem("subject", "ict")
-}
-//Morse Code Table Toggler
-function submc() {
-    lessonsq = mcquestions;
-    lessonsa = mcanswers;
-    que = lessonsa[arr];
-    document.getElementById("question").innerHTML = lessonsq[arr];
-    document.getElementById("qtitle").innerHTML = "Morse Code";
-    document.getElementById("morsecodetabletoggle").style.setProperty("display", "block");
-    localStorage.setItem("subject", "morse")
-}
+// function subict() {
+//     lessonsq = ictquestions;
+//     lessonsa = ictanswers;
+//     que = lessonsa[arr];
+//     document.getElementById("question").innerHTML = lessonsq[arr];
+//     document.getElementById("qtitle").innerHTML = "ICT"
+//     document.getElementById("morsecodetable").style.setProperty("display", "none");
+//     document.getElementById("morsecodetabletoggle").style.setProperty("display", "none");
+//     localStorage.setItem("subject", "ict")
+// }
+// //Morse Code Table Toggler
+// function submc() {
+//     lessonsq = mcquestions;
+//     lessonsa = mcanswers;
+//     que = lessonsa[arr];
+//     document.getElementById("question").innerHTML = lessonsq[arr];
+//     document.getElementById("qtitle").innerHTML = "Morse Code";
+//     document.getElementById("morsecodetabletoggle").style.setProperty("display", "block");
+//     localStorage.setItem("subject", "morse")
+// }
 
-mctable = document.getElementById("morsecodetable").style;
-mctable.display = "none"
-function mctog() {
-    if (mctable.display === "none"){
-        mctable.display = "block"
-    }
-    else{
-        mctable.display = "none"
-    }
-}
+// mctable = document.getElementById("morsecodetable").style;
+// mctable.display = "none"
+// function mctog() {
+//     if (mctable.display === "none"){
+//         mctable.display = "block"
+//     }
+//     else{
+//         mctable.display = "none"
+//     }
+// }
 
-var lessonsq = csquestions;
-var lessonsa = csanswers;
+// var lessonsq = csquestions;
+// var lessonsa = csanswers;
 
-var arr = Math.floor(Math.random() * lessonsq.length)
-ans = "correct"
-que = lessonsa[arr];
-ansd = document.getElementById("answer").value;
+// var arr = Math.floor(Math.random() * lessonsq.length)
+// ans = "correct"
+// que = lessonsa[arr];
+// ansd = document.getElementById("answer").value;
 
-function question() {
-    ansd = document.getElementById("answer").value;
-    if(ansd === que) {
-        var arr = Math.floor(Math.random() * lessonsq.length)
-        document.getElementById("question").innerHTML = lessonsq[arr];
-        que = lessonsa[arr];
-        document.getElementById("aaa").innerHTML = "";
-        document.getElementById("wrong").style.setProperty("display", "none");
-        document.getElementById("va").style.setProperty("display", "none");
-        document.getElementById("answer").value = "";
-    }
-    else {
-        document.getElementById("wrong").style.setProperty("display", "block");
-        document.getElementById("va").style.setProperty("display", "block");
-        ans = "wrong";
-    }
-}
+// function question() {
+//     ansd = document.getElementById("answer").value;
+//     if(ansd === que) {
+//         var arr = Math.floor(Math.random() * lessonsq.length)
+//         document.getElementById("question").innerHTML = lessonsq[arr];
+//         que = lessonsa[arr];
+//         document.getElementById("aaa").innerHTML = "";
+//         document.getElementById("wrong").style.setProperty("display", "none");
+//         document.getElementById("va").style.setProperty("display", "none");
+//         document.getElementById("answer").value = "";
+//     }
+//     else {
+//         document.getElementById("wrong").style.setProperty("display", "block");
+//         document.getElementById("va").style.setProperty("display", "block");
+//         ans = "wrong";
+//     }
+// }
 
-//Enter key pressed in q&a 
-function qnaa(event) {
-    event.preventDefault();
-    question();
-}
+// //Enter key pressed in q&a 
+// function qnaa(event) {
+//     event.preventDefault();
+//     question();
+// }
 
-//View answers 
-function va() {
-    document.getElementById("aaa").innerHTML = que;
-    document.getElementById("answer").value = que;
-    setTimeout(function(){
-        question()
-    }, 2200); 
-}
+// //View answers 
+// function va() {
+//     document.getElementById("aaa").innerHTML = que;
+//     document.getElementById("answer").value = que;
+//     setTimeout(function(){
+//         question()
+//     }, 2200); 
+// }
 
 //Enter key press settings
 function bg(event) {
